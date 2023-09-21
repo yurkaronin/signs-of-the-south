@@ -1,0 +1,121 @@
+.visually-hidden:not(:focus),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.button {
+  text-decoration: none;
+  padding: 17px 24px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  border: none;
+  color: var(--Dark, #121d36);
+  // font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    background-color: #ffcb00;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    font-size: initial;
+    font-style: initial;
+    font-weight: initial;
+    line-height: initial;
+  }
+
+  &:hover {
+    // color: #2b1b14;
+    // text-decoration: none;
+  }
+
+  &:hover::before {
+    left: -8px;
+    top: -8px;
+    bottom: -8px;
+    right: -8px;
+  }
+}
+
+.button-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border: none;
+  &::before {
+    background: #cc006f;
+  }
+
+  & span,
+  & span::after,
+  & span::before {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  & span::after,
+  & span::before {
+    content: "";
+    display: block;
+    transition: 0.3s;
+  }
+
+  & span::before {
+    transform: translateY(-8px);
+  }
+
+  & span::after {
+    transform: translateY(8px);
+  }
+
+  &.active span {
+    height: 0;
+  }
+
+  &.active span:before {
+    transform: rotate(-45deg);
+  }
+
+  &.active span:after {
+    transform: rotate(45deg);
+  }
+}

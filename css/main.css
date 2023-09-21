@@ -1,1 +1,103 @@
-/*# sourceMappingURL=main.css.map */
+.visually-hidden:not(:focus),
+input[type=checkbox].visually-hidden,
+input[type=radio].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.button {
+  text-decoration: none;
+  padding: 17px 24px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border: none;
+  color: var(--Dark, #121d36);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  background-color: #ffcb00;
+}
+.button__text {
+  position: relative;
+  z-index: 2;
+  font-size: initial;
+  font-style: initial;
+  font-weight: initial;
+  line-height: initial;
+}
+.button:hover::before {
+  left: -8px;
+  top: -8px;
+  bottom: -8px;
+  right: -8px;
+}
+
+.button-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border: none;
+}
+.button-menu::before {
+  background: #cc006f;
+}
+.button-menu span, .button-menu span::after, .button-menu span::before {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.button-menu span::after, .button-menu span::before {
+  content: "";
+  display: block;
+  transition: 0.3s;
+}
+.button-menu span::before {
+  transform: translateY(-8px);
+}
+.button-menu span::after {
+  transform: translateY(8px);
+}
+.button-menu.active span {
+  height: 0;
+}
+.button-menu.active span:before {
+  transform: rotate(-45deg);
+}
+.button-menu.active span:after {
+  transform: rotate(45deg);
+}/*# sourceMappingURL=main.css.map */
