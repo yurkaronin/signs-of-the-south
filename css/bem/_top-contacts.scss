@@ -1,0 +1,58 @@
+.top-contacts {
+  display: flex;
+  margin-right: 32px;
+  &__link {
+    text-decoration: none;
+    color: var(--Dark);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 0.48px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    &:hover {
+      color: var(--Blue);
+    }
+  }
+  &__link--whatsapp {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    &:hover {
+      color: var(--Green);
+    }
+  }
+  &__icon {
+    margin-right: 16px;
+  }
+  &__link + &__link {
+    margin-left: 35px;
+  }
+
+  @media (max-width: 1200px) {
+    display: block;
+
+    &__link {
+      justify-content: flex-end;
+    }
+  }
+  @media (max-width: 1023px) {
+    margin-right: initial;
+  }
+
+  @media (max-width: 767px) {
+    &__link {
+      display: none;
+    }
+    &__link--whatsapp {
+      display: block;
+    }
+    &__icon {
+      margin: 0;
+    }
+    &__text {
+      display: none;
+    }
+  }
+}
