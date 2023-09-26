@@ -1,0 +1,139 @@
+.header {
+  background: var(--White);
+  border-bottom: 1px solid var(--Mod-2);
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  z-index: 10;
+
+  &__top {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__logotype {
+    max-width: 304px;
+    margin-right: auto;
+    a {
+      text-decoration: none;
+      display: flex;
+      max-width: 100%;
+    }
+    img {
+      display: block;
+    }
+  }
+  &__nav-button {
+    margin-left: 16px;
+  }
+  &__bottom-grid {
+    display: grid;
+    gap: 32px;
+    align-items: flex-start;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  &__navigation {
+    grid-column: 1 / span 5;
+  }
+  &__contacts {
+    grid-column: 7 / span 6;
+    margin-top: 32px;
+  }
+  &__bottom {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding-top: 105px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100vw;
+    display: grid;
+    transition: all 0.3s;
+  }
+  &__bottom.isActive {
+    left: 0;
+  }
+  &__button {
+    max-width: 208px;
+    width: 100%;
+
+    .button {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 1200px) {
+    &__bottom {
+      padding-top: 88px;
+    }
+    &__flex {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    &__contacts {
+      margin-top: 23px;
+    }
+    .contacts__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 1023px) {
+    &__top {
+      background-color: var(--White);
+    }
+    &__button {
+      display: none;
+    }
+    &__bottom-grid {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 50px;
+    }
+    &__navigation {
+      grid-column: initial;
+    }
+    &__contacts {
+      grid-column: initial;
+      margin-top: 0;
+    }
+    &__bottom {
+      overflow-y: auto;
+      display: block;
+      padding-top: calc(88px + 45px);
+      padding-bottom: 64px;
+    }
+    &__bottom-grid {
+      grid-template-columns: 1fr;
+    }
+    .contacts__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 767px) {
+    &__logotype {
+      max-width: 220px;
+    }
+    &__bottom-grid {
+      gap: 16px;
+    }
+    .contacts__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 16px;
+    }
+  }
+}
+
+.header.active,
+.header.scroll {
+  border-bottom-color: transparent;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  .header__flex {
+    border-bottom: 1px solid var(--Mod-2);
+  }
+}

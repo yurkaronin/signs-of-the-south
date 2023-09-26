@@ -1,0 +1,82 @@
+.contacts {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 32px;
+  }
+  &__title {
+    margin: 0;
+    font-size: 14px;
+  }
+  &__text {
+    margin: 0;
+    color: var(--Dark);
+    font-family: var(--Manrope);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 9px;
+
+    * {
+      pointer-events: none;
+    }
+
+    &::before {
+      content: "";
+      border-radius: 50%;
+      border: 1px solid var(--Mod-4);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+    }
+  }
+  &__link {
+    display: block;
+  }
+
+  &__icon path {
+    transition: all 0.3s;
+  }
+  &__icon:hover path {
+    stroke: var(--White);
+  }
+  &__icon--telegram:hover {
+    path {
+      stroke: none;
+      fill: var(--White);
+    }
+    path:last-of-type {
+      fill: var(--Pink);
+    }
+  }
+  &__icon--whatsapp:hover path {
+    stroke: none;
+    fill: var(--White);
+  }
+  &__icon:hover::before {
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    border: 1px solid var(--Pink);
+    background-color: var(--Pink);
+  }
+}

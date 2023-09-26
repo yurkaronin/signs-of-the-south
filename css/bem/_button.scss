@@ -1,0 +1,46 @@
+.button {
+  text-decoration: none;
+  padding: 17px 24px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  outline: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  border: none;
+  color: var(--Dark);
+  min-height: 56px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    background-color: var(--Yellow);
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    font-family: var(--Manrope);
+    color: var(--Dark);
+  }
+
+  &:hover::before {
+    left: -8px;
+    top: -8px;
+    bottom: -8px;
+    right: -8px;
+  }
+}
