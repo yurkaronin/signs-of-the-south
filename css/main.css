@@ -315,6 +315,10 @@ input[type=radio].visually-hidden {
 .top-contacts__icon {
   margin-right: 16px;
 }
+.top-contacts__icon svg {
+  width: 24px;
+  height: 24px;
+}
 .top-contacts__link + .top-contacts__link {
   margin-left: 35px;
 }
@@ -343,6 +347,10 @@ input[type=radio].visually-hidden {
   }
   .top-contacts__text {
     display: none;
+  }
+  .top-contacts__icon svg {
+    width: 40px;
+    height: 40px;
   }
 }
 
