@@ -41,4 +41,28 @@ function requestTick() {
 document.addEventListener("DOMContentLoaded", function () {
   headerChange();
   window.addEventListener("scroll", onScroll, { passive: true });
+  // слайдер в первом экране
+  if(document.querySelector('.js-first-slider')) {
+    let swiper = new Swiper('.js-first-slider', {
+      loop: true,
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // },
+        speed: 700,
+
+      navigation: {
+        nextEl: ".js-first-slider .swiper-button-next",
+        prevEl: ".js-first-slider .swiper-button-prev",
+      }
+    });
+  }
+
+
+
 });
+
+
+
+
+

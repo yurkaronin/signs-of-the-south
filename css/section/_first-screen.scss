@@ -1,0 +1,119 @@
+.first-screen {
+  padding-top: 65px;
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    color: var(--Dark);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+  &__text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 84px;
+  }
+  &__image {
+    height: 600px;
+    max-width: 100%;
+    width: 100%;
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__slider {
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__slider-item {
+    overflow: hidden;
+    position: relative;
+  }
+  &__details {
+    margin-bottom: -27px;
+  }
+
+  .slider-navigation__flex {
+    position: absolute;
+    bottom: calc(600px - 27px);
+    right: 48px;
+    max-width: max-content;
+    margin-left: auto;
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 80px;
+    &__title {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    &__text {
+      margin-bottom: 70px;
+    }
+    &__image {
+      height: 340px;
+    }
+    .slider-navigation__flex {
+      position: absolute;
+      bottom: calc(340px - 27px);
+    }
+  }
+  @media (max-width: 1023px) {
+    padding-top: 133px;
+    &__image {
+      height: 468px;
+    }
+    .slider-navigation__flex {
+      bottom: calc(468px - 27px);
+    }
+    &__text {
+      margin-bottom: 115px;
+    }
+  }
+  @media (max-width: 767px) {
+    padding-top: 21px;
+    &__title {
+      font-size: 30px;
+      margin-bottom: 4px;
+      padding-right: 32px;
+      line-height: 1.3;
+    }
+    &__text {
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+    &__image {
+      height: 295px;
+    }
+    .slider-navigation__flex {
+      right: 20px;
+      bottom: calc(295px - 27px);
+    }
+    &__text {
+      margin-bottom: 23px;
+    }
+    .slider-navigation__flex {
+      right: 20px;
+    }
+  }
+}
+
+.slider-navigation {
+  .wrapper {
+    position: relative;
+  }
+  &__flex {
+    display: flex;
+  }
+  .button:last-of-type {
+    margin-left: 16px;
+  }
+}

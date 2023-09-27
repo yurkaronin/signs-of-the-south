@@ -1,6 +1,6 @@
 .button {
   text-decoration: none;
-  padding: 17px 24px;
+  padding: 17px 36px;
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -13,6 +13,11 @@
   border: none;
   color: var(--Dark);
   min-height: 56px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  font-family: var(--Manrope);
 
   &::before {
     content: "";
@@ -24,17 +29,30 @@
     transition: all 0.3s ease-in-out;
     pointer-events: none;
     background-color: var(--Yellow);
+    z-index: 0;
   }
 
-  &__text {
+  span {
     position: relative;
     z-index: 2;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1;
-    font-family: var(--Manrope);
-    color: var(--Dark);
+  }
+  svg {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--pink {
+    color: var(--White);
+    &::before {
+      background-color: var(--Pink);
+    }
+  }
+
+  &--blue {
+    color: var(--White);
+    &::before {
+      background-color: var(--Blue);
+    }
   }
 
   &:hover::before {
@@ -42,5 +60,10 @@
     top: -8px;
     bottom: -8px;
     right: -8px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 50px;
+    // padding: 13px 20px;
   }
 }
