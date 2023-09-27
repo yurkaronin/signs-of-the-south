@@ -27,12 +27,7 @@
       height: 100%;
     }
   }
-  &__slider {
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-  }
+
   &__slider-item {
     overflow: hidden;
     position: relative;
@@ -40,7 +35,10 @@
   &__details {
     margin-bottom: -27px;
   }
-
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
   .slider-navigation__flex {
     position: absolute;
     bottom: calc(600px - 27px);

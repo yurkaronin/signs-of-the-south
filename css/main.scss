@@ -4,6 +4,7 @@
 
   --Pink: #CC006F;
   --Dark: #121D36;
+  --Black: #141E34;
   --White: #ffffff;
   --Blue: #008AD1;
   --Yellow: #FFCB00;
@@ -30,9 +31,14 @@
 @import "bem/top-contacts";
 @import "bem/wrapper";
 @import "bem/contacts";
+@import "bem/title-group";
+@import "bem/section";
+@import "bem/arrow-icon";
+
 
 @import "section/header";
 @import "section/first-screen";
+@import "section/announcement-catalog";
 
 @import "activity/menu-open";
 @import "activity/modal-show";

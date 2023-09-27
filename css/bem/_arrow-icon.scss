@@ -1,0 +1,12 @@
+.arrow-icon {
+  overflow: visible;
+  path:not([class]) {
+    transform: translateX(0);
+    transition: all 0.3s;
+  }
+}
+
+a:hover .arrow-icon path:not([class]) {
+  transform: translateX(7px);
+  transition: all 0.3s;
+}
