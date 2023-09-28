@@ -7,8 +7,8 @@
   <title>Главная</title>
   <meta name="description" content="Описание главной страницы для поисковиков">
 
-  <link rel="icon" href="favicon.png" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,6 +236,7 @@
     </div>
   </header>
   <main class="main">
+
     <section class="first-screen">
       <div class="first-screen__slider swiper js-first-slider">
 
@@ -300,9 +301,9 @@
           <div class="announcement-catalog__item">
             <div class="title-group">
               <h2 class="title-group__title">Каталог продукции</h2>
-              <div class="title-group__text">Самая ходовая наружная реклама в Краснодаре: объемные световые буквы,
+              <p class="title-group__text">Самая ходовая наружная реклама в Краснодаре: объемные световые буквы,
                 световые короба, панель-кронштейны световые, изготовление световых вывесок с буквами, аптечные кресты.
-              </div>
+              </p>
             </div>
 
 
@@ -415,9 +416,43 @@
         </div>
       </div>
     </section>
-    <section class="get-offer">
-      <div class="wrapper"></div>
+
+    <section class="get-offer section">
+      <div class="wrapper">
+        <div class="get-offer__container">
+          <div class="title-group">
+            <h2 class="title-group__title">Получить предложение</h2>
+            <p class="title-group__text">Оставьте ваши контактные данные и наш сотрудник свяжется с вами в ближайшее
+              время</p>
+          </div>
+          <div class="custom-form">
+            <div class="custom-form__grid">
+              <div class="custom-form__element">
+                <input type="text" placeholder="Имя">
+              </div>
+              <div class="custom-form__element">
+                <input type="tel" placeholder="Телефон">
+              </div>
+              <div class="custom-form__element custom-form__element--big">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+              </div>
+              <div class="custom-form__element custom-form__element--flex">
+
+                <div class="confurm">
+                  <input class="visually-hidden" type="checkbox" name="input-checkbox" id="confurm-checkbox" checked required>
+                  <label for="confurm-checkbox">Согласен на обработку <a href="#" target="_blank">персональных данных</a></label>
+                </div>
+                <a href="#" class="button button--pink">
+                  <span class="button__text">Получить предложение</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
+
     <section class="advantages-company">
       <div class="wrapper"></div>
     </section>

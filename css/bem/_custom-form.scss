@@ -1,0 +1,80 @@
+.custom-form {
+  &__grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__element--big {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  &__element--flex {
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  input,
+  textarea {
+    max-width: 100%;
+    width: 100%;
+    font-family: inherit;
+    color: var(--Mod-1);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: inherit;
+    padding: 10px 24px 12px;
+    border: 1px solid var(--Line);
+    background-color: var(--White);
+    &:hover {
+      border: 1px solid var(--Mod-6);
+    }
+    &:focus {
+      border-color: var(--Dark);
+      color: var(--Dark);
+    }
+  }
+  textarea {
+    height: 144px;
+    resize: vertical;
+  }
+  .confurm {
+    margin-right: 16px;
+  }
+  .button {
+    margin-left: auto;
+  }
+
+  @media (max-width: 767px) {
+    &__grid {
+      gap: 20px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__element--flex {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 22px;
+    }
+    .confurm {
+      margin-right: 0;
+    }
+    .button {
+      margin-left: initial;
+    }
+    textarea {
+      height: 175px;
+    }
+
+  }
+
+  @media (max-width: 420px) {
+    .button {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

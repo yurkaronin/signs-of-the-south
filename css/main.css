@@ -9,11 +9,13 @@
   --BG: #F4F7FC;
   --Text: #5A6173;
   --Green: #43AD45;
+  --Line: #dddfe6;
   --Mod-1: rgba(18, 29, 54, 0.6);
   --Mod-2: rgba(18, 29, 54, 0.15);
   --Mod-3: rgba(18, 29, 54, 0.25);
   --Mod-4: #DCDDE1;
   --Mod-5: rgba(0, 0, 0, 0.15);
+  --Mod-6: #777e90;
   --font-1: 16px;
 }
 
@@ -538,7 +540,7 @@ input[type=radio].visually-hidden {
   background-position: top left;
   background-repeat: no-repeat;
 }
-.title-group__title__text {
+.title-group__text {
   margin: 0;
   display: block;
   color: var(--Mod-1);
@@ -582,6 +584,132 @@ input[type=radio].visually-hidden {
 a:hover .arrow-icon path:not([class]) {
   transform: translateX(7px);
   transition: all 0.3s;
+}
+
+.confurm label {
+  color: var(--Dark);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  padding-left: 40px;
+}
+.confurm label::before {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  border: 1px solid var(--Line);
+  background-color: var(--White);
+}
+.confurm label:hover::before {
+  border: 1px solid var(--Mod-6);
+  background-color: var(--White);
+}
+.confurm a {
+  text-decoration: underline;
+  color: var(--Blue);
+}
+.confurm input[type=checkbox]:checked + label::after {
+  z-index: 2;
+  content: "";
+  display: block;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: var(--Pink);
+  left: 5px;
+  top: 5px;
+}
+@media (max-width: 767px) {
+  .confurm a {
+    display: block;
+    padding-left: 40px;
+  }
+}
+
+.custom-form__grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.custom-form__element--big {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.custom-form__element--flex {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.custom-form input,
+.custom-form textarea {
+  max-width: 100%;
+  width: 100%;
+  font-family: inherit;
+  color: var(--Mod-1);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: inherit;
+  padding: 10px 24px 12px;
+  border: 1px solid var(--Line);
+  background-color: var(--White);
+}
+.custom-form input:hover,
+.custom-form textarea:hover {
+  border: 1px solid var(--Mod-6);
+}
+.custom-form input:focus,
+.custom-form textarea:focus {
+  border-color: var(--Dark);
+  color: var(--Dark);
+}
+.custom-form textarea {
+  height: 144px;
+  resize: vertical;
+}
+.custom-form .confurm {
+  margin-right: 16px;
+}
+.custom-form .button {
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .custom-form__grid {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .custom-form__element--flex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 22px;
+  }
+  .custom-form .confurm {
+    margin-right: 0;
+  }
+  .custom-form .button {
+    margin-left: initial;
+  }
+  .custom-form textarea {
+    height: 175px;
+  }
+}
+@media (max-width: 420px) {
+  .custom-form .button {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -945,7 +1073,7 @@ a:hover .arrow-icon path:not([class]) {
     margin-bottom: 10px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 767px) {
   .announcement-catalog__grid {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
@@ -981,6 +1109,48 @@ a:hover .arrow-icon path:not([class]) {
 .announcement-catalog__link:hover .announcement-catalog__icon-line {
   transform: translateX(-7px);
   transition: all 0.3s;
+}
+
+.get-offer {
+  background-image: url(../img/get-offer/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+}
+.get-offer__container {
+  max-width: 688px;
+  margin-right: auto;
+  margin-left: 0;
+}
+.get-offer .title-group {
+  margin-bottom: 22px;
+}
+@media (max-width: 1200px) {
+  .get-offer {
+    padding-top: 625px;
+    background-image: url(../img/get-offer/1-1024.jpg);
+    background-position: top center;
+  }
+  .get-offer__container {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .get-offer {
+    background-image: url(../img/get-offer/1-768.jpg);
+  }
+}
+@media (max-width: 767px) {
+  .get-offer {
+    padding-top: 605px;
+  }
+}
+@media (max-width: 420px) {
+  .get-offer {
+    padding-top: 395px;
+    background-image: url(../img/get-offer/1-375.jpg);
+    background-size: contain;
+  }
 }
 
 .menu-open .header {

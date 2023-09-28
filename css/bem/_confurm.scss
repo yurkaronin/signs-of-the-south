@@ -1,0 +1,54 @@
+.confurm {
+  label {
+    color: var(--Dark);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    padding-left: calc(24px + 16px);
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+      border: 1px solid var(--Line);
+      background-color: var(--White);
+    }
+    &:hover {
+      &::before {
+        border: 1px solid var(--Mod-6);
+        background-color: var(--White);
+      }
+    }
+  }
+  a {
+    text-decoration: underline;
+    color: var(--Blue);
+  }
+  input[type="checkbox"]:checked + label::after {
+    z-index: 2;
+    content: "";
+    display: block;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: var(--Pink);
+    left: 5px;
+    top: 5px;
+  }
+
+  @media (max-width: 767px) {
+    a {
+      display: block;
+      padding-left: 40px;
+    }
+  }
+}
