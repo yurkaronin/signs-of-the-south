@@ -57,6 +57,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  // слайдер с отзывами
+  if(document.querySelector('.js-reviews-slider')) {
+    let swiper = new Swiper('.js-reviews-slider', {
+      loop: true,
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // },
+        speed: 700,
+
+      navigation: {
+        nextEl: ".reviews .swiper-button-next",
+        prevEl: ".reviews .swiper-button-prev",
+      }
+    });
+  }
 
 
 

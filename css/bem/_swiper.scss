@@ -1,0 +1,18 @@
+.swiper {
+  &__navigation {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: max-content;
+  }
+  &__pagination {
+    color: var(--Black);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 0;
+    position: initial;
+  }
+}

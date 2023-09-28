@@ -1,0 +1,14 @@
+.custom-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 2fr;
+  &__left {
+  }
+  &__right {
+  }
+
+  @media (max-width: 1200px) {
+    gap: 26px;
+    grid-template-columns: 1fr;
+  }
+}
