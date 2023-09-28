@@ -1,0 +1,81 @@
+.custom-icon {
+  &__vector {
+    width: 88px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 32px;
+    &::before {
+      content: "";
+      border-radius: 50%;
+      border: 1px solid var(--Mod-4);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    svg {
+      pointer-events: none;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 2;
+      * {
+        transition: all 0.3s;
+      }
+    }
+  }
+  &__title {
+    margin: 0;
+    color: var(--Black);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    min-height: 60px;
+  }
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  &__vector:hover::before {
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    border: 1px solid var(--Pink);
+    background-color: var(--Pink);
+  }
+
+  &__vector:hover path {
+    stroke: var(--White);
+  }
+
+  @media (max-width: 1023px) {
+    &__title {
+      min-height: 40px;
+    }
+  }
+  @media (max-width: 767px) {
+    &__vector {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 16px;
+    }
+    &__title {
+      min-height: initial;
+      margin-bottom: 4px;
+    }
+  }
+
+}

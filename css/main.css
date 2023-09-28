@@ -556,6 +556,7 @@ input[type=radio].visually-hidden {
   .title-group__title {
     font-size: 25px;
     margin-bottom: 16px;
+    padding-right: 40px;
   }
 }
 
@@ -709,6 +710,81 @@ a:hover .arrow-icon path:not([class]) {
   .custom-form .button {
     max-width: 100%;
     width: 100%;
+  }
+}
+
+.custom-icon__vector {
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 32px;
+}
+.custom-icon__vector::before {
+  content: "";
+  border-radius: 50%;
+  border: 1px solid var(--Mod-4);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.custom-icon__vector svg {
+  pointer-events: none;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+.custom-icon__vector svg * {
+  transition: all 0.3s;
+}
+.custom-icon__title {
+  margin: 0;
+  color: var(--Black);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  min-height: 60px;
+}
+.custom-icon__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.custom-icon__vector:hover::before {
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  border: 1px solid var(--Pink);
+  background-color: var(--Pink);
+}
+.custom-icon__vector:hover path {
+  stroke: var(--White);
+}
+@media (max-width: 1023px) {
+  .custom-icon__title {
+    min-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .custom-icon__vector {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+  }
+  .custom-icon__title {
+    min-height: initial;
+    margin-bottom: 4px;
   }
 }
 
@@ -1150,6 +1226,42 @@ a:hover .arrow-icon path:not([class]) {
     padding-top: 395px;
     background-image: url(../img/get-offer/1-375.jpg);
     background-size: contain;
+  }
+}
+
+.advantages-company {
+  background-image: url(../img/advantages-company/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.advantages-company__grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 2fr;
+}
+.advantages-company__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+@media (max-width: 1200px) {
+  .advantages-company__grid {
+    gap: 26px;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1023px) {
+  .advantages-company__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .advantages-company__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
   }
 }
 
