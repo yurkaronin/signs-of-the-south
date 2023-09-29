@@ -1432,6 +1432,49 @@ a:hover .arrow-icon path:not([class]) {
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
+  .reviews .custom-grid {
+    display: block;
+  }
+  .reviews .custom-grid__left {
+    margin-bottom: 56px;
+  }
+  .reviews .reviews__navigation {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+  .reviews .swiper__pagination {
+    max-width: max-content;
+    margin-left: auto;
+  }
+}
+@media (max-width: 1023px) {
+  .reviews .custom-grid__left {
+    grid-template-columns: 4fr 2fr;
+    gap: 32px;
+  }
+  .reviews .custom-grid__left {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .reviews .custom-grid__left {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .reviews .reviews__navigation {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: initial;
+  }
+  .reviews .swiper__pagination {
+    max-width: max-content;
+    margin-left: initial;
+  }
+  .reviews .custom-icon__vector {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .menu-open .header {

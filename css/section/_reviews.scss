@@ -134,11 +134,49 @@
       flex-direction: row-reverse;
       justify-content: flex-end;
     }
-    .swiper {
-
+    .custom-grid {
+      display: block;
     }
-    .swiper-slide {
+    .custom-grid__left {
+      margin-bottom: 56px;
+    }
+    .reviews__navigation {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+    }
+    .swiper__pagination {
+      max-width: max-content;
+      margin-left: auto;
+    }
+  }
 
+  @media (max-width: 1023px) {
+    .custom-grid__left {
+      grid-template-columns: 4fr 2fr;
+      gap: 32px;
+    }
+    .custom-grid__left {
+      margin-bottom: 32px;
+    }
+  }
+  @media (max-width: 767px) {
+    .custom-grid__left {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .reviews__navigation {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: initial;
+    }
+    .swiper__pagination {
+      max-width: max-content;
+      margin-left: initial;
+    }
+    .custom-icon__vector {
+      width: 140px;
+      height: 140px;
     }
   }
 }
