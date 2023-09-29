@@ -1534,33 +1534,33 @@ a:hover .arrow-icon path:not([class]) {
   object-fit: cover;
 }
 
-.content {
+.content__text {
   font-size: 18px;
   color: var(--Text);
 }
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
+.content__text h1,
+.content__text h2,
+.content__text h3,
+.content__text h4,
+.content__text h5,
+.content__text h6 {
   color: var(--Dark);
   font-size: 20px;
   font-weight: 700;
 }
-.content ul,
-.content ol {
+.content__text ul,
+.content__text ol {
   line-height: 2;
 }
-.content ol {
+.content__text ol {
   list-style: none;
   padding-left: 26px;
 }
-.content ol li {
+.content__text ol li {
   position: relative;
   counter-increment: item;
 }
-.content ol li::before {
+.content__text ol li::before {
   content: counter(item) ")";
   position: absolute;
   left: -1.5em;
