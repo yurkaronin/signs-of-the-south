@@ -1474,6 +1474,88 @@ a:hover .arrow-icon path:not([class]) {
   .reviews .custom-icon__vector {
     width: 140px;
     height: 140px;
+    margin-top: -41px;
+  }
+  .reviews__item {
+    padding: 17px 20px 14px;
+  }
+}
+
+.footer {
+  background-image: url(../img/advantages-company/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+.footer__contacts {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  padding-right: 16px;
+  display: grid;
+}
+.footer__map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  grid-column-start: 7;
+  grid-column-end: -1;
+  display: grid;
+}
+.footer__map img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+@media (max-width: 1200px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+  .footer__contacts {
+    grid-column-start: initial;
+    grid-column-end: initial;
+  }
+  .footer__map {
+    grid-column-start: initial;
+    grid-column-end: initial;
+    position: relative;
+    max-width: initial;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
+    height: 528px;
+  }
+}
+@media (max-width: 1023px) {
+  .footer__grid {
+    gap: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__grid {
+    gap: 32px;
+  }
+  .footer__map {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 375px;
+  }
+  .footer .contacts__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
   }
 }
 

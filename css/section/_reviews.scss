@@ -177,6 +177,10 @@
     .custom-icon__vector {
       width: 140px;
       height: 140px;
+      margin-top: calc(-17px - 24px);
+    }
+    &__item {
+      padding: 17px 20px 14px;
     }
   }
 }
