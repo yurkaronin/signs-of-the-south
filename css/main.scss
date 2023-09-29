@@ -21,6 +21,7 @@
   --Mod-5:  rgba(0, 0, 0, 0.15);
   --Mod-6:  #777e90;
   --Mod-7:  #F1FAFF;
+  --Mod-8:  #6D7485;
 
   --font-1: 16px;
 }
@@ -49,6 +50,8 @@
 @import "section/get-offer";
 @import "section/advantages-company";
 @import "section/reviews";
+@import "section/portfolio";
+@import "section/content";
 @import "section/footer";
 
 @import "activity/menu-open";

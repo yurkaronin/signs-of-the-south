@@ -90,6 +90,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+   // слайдер с работами
+   if (document.querySelector('.js-portfolio-slider')) {
+    let swiper3 = new Swiper('.js-portfolio-slider', {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 32,
+      slidesPerGroup: 1,
+
+      navigation: {
+        nextEl: ".portfolio .swiper-button-next",
+        prevEl: ".portfolio .swiper-button-prev",
+      },
+      pagination: {
+        el: ".portfolio .swiper-pagination",
+        type: "fraction",
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1
+        },
+        // when window width is >= 480px
+        767: {
+          slidesPerView: 1.4
+        },
+        // when window width is >= 640px
+        1023: {
+          slidesPerView: 2
+        }
+      }
+    });
+  }
+
 
 
 });
