@@ -1,14 +1,26 @@
 .custom-grid {
   display: grid;
   gap: 32px;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(12, 1fr);
   &__left {
+    grid-column-start: 1;
+    grid-column-end: 5;
   }
   &__right {
+    grid-column-start: 5;
+    grid-column-end: -1;
   }
 
   @media (max-width: 1200px) {
     gap: 26px;
     grid-template-columns: 1fr;
+    &__left {
+      grid-column-start: initial;
+      grid-column-end: initial;
+    }
+    &__right {
+      grid-column-start: initial;
+      grid-column-end: initial;
+    }
   }
 }

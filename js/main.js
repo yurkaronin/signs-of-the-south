@@ -42,14 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
   headerChange();
   window.addEventListener("scroll", onScroll, { passive: true });
   // слайдер в первом экране
-  if(document.querySelector('.js-first-slider')) {
+  if (document.querySelector('.js-first-slider')) {
     let swiper = new Swiper('.js-first-slider', {
       loop: true,
-        // autoplay: {
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // },
-        speed: 700,
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+      speed: 700,
 
       navigation: {
         nextEl: ".js-first-slider .swiper-button-next",
@@ -58,19 +58,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   // слайдер с отзывами
-  if(document.querySelector('.js-reviews-slider')) {
-    let swiper = new Swiper('.js-reviews-slider', {
+  if (document.querySelector('.js-reviews-slider')) {
+    let swiper2 = new Swiper('.js-reviews-slider', {
       loop: true,
-        // autoplay: {
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // },
-        speed: 700,
+      slidesPerView: 2,
+      spaceBetween: 32,
+      slidesPerGroup: 1,
 
       navigation: {
         nextEl: ".reviews .swiper-button-next",
         prevEl: ".reviews .swiper-button-prev",
-      }
+      },
+      pagination: {
+        el: ".reviews .swiper-pagination",
+        type: "fraction",
+      },
     });
   }
 
